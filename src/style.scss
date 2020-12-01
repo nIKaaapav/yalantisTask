@@ -1,0 +1,89 @@
+.wrapper {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.card {
+  &__wrapper{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__employees-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    &--checked {
+      width: 250px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    text-align: center;
+    &--birthday-part{
+      font-size: 20px;
+      text-align: center;
+      &::after {
+        margin: 0 auto;
+        content: '';
+        display: block;
+        margin-top: 20px;
+        border-top: 1px solid gray;
+        width: 200px;
+      }
+    }
+  }
+
+  &__vertical-line{
+    &:after {
+      content: '';
+      display: block;
+      border-left: 1px solid gray;
+      height: 100%;
+      position: absolute;
+      left: 100%;
+      margin-left: -3px;
+      top: 20px ;
+    }
+  }
+
+}
+
+
+
+.employee {
+  &__item{
+    list-style-type: none;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+
+  }
+
+  &__name{
+    font-size: 12px;
+    vertical-align: center;
+    margin-right: 7px;
+  }
+
+  &__checkbox-isChecked{
+    font-size: 8px;
+    color: gray;
+  }
+
+  &__birthday{
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+}
